@@ -119,5 +119,11 @@ const styles = StyleSheet.create({
         fontVariant: ['small-caps'],
         color: '#C2C2C2',
     },
+    forgotPasswordText: {
+        fontSize: 17,
+        marginTop: 9,
+        textAlign: 'right',
+        color: '#34967C'
+    },
 });
 export { styles };
