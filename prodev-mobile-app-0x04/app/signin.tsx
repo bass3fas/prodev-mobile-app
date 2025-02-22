@@ -7,12 +7,12 @@ import { useRouter } from 'expo-router'; // Import useRouter from expo-router
 export default function Index() {
   const router = useRouter(); // Use the useRouter hook
 
-  const handleHomePress = () => {
-    router.push('/'); // Navigate to the home screen
+  const handleJoinPress = () => {
+    router.push('/join'); // Navigate to the join screen
   };
 
-  const handleSignInPress = () => {
-    router.push('/signin'); // Navigate to the sign-in screen
+  const handleHomePress = () => {
+    router.push('/'); // Navigate to the home screen
   };
 
   return (
@@ -27,11 +27,11 @@ export default function Index() {
               <Image source={require('@/assets/images/logo-green.png')} />
             </View>
             <View style={styles.titleTextGroup}>
-              <Text style={styles.titleText}>Create your</Text>
+              <Text style={styles.titleText}>Sign in to your</Text>
               <Text style={styles.titleText}>Account</Text>
             </View>
             <Text style={styles.subText}>
-              Enter your details to create a new account.
+              Enter your email and password to sign in.
             </Text>
 
             <View style={styles.formGroup}>
@@ -46,17 +46,11 @@ export default function Index() {
                   <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
                 </View>
               </View>
-              <View style={{ marginTop: 20 }}>
-                <Text style={styles.formLabel}>Confirm Password</Text>
-                <View style={styles.formPasswordControl}>
-                  <TextInput style={styles.passwordControl} />
-                  <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
-                </View>
-              </View>
+              <Text style={styles.forgotPasswordText}>Forgot password?</Text>
             </View>
 
             <TouchableOpacity style={styles.primaryButton}>
-              <Text style={styles.buttonText}>Create</Text>
+              <Text style={styles.buttonText}>Sign in</Text>
             </TouchableOpacity>
 
             <View style={styles.dividerGroup}>
@@ -83,9 +77,9 @@ export default function Index() {
           </View>
 
           <View style={styles.signupgroup}>
-            <Text style={styles.signupTitleText}>Have an account?</Text>
-            <TouchableOpacity onPress={handleSignInPress}>
-              <Text style={styles.signupSubTitleText}>Sign In</Text>
+            <Text style={styles.signupTitleText}>Don't have an account?</Text>
+            <TouchableOpacity onPress={handleJoinPress}>
+              <Text style={styles.signupSubTitleText}>Join now</Text>
             </TouchableOpacity>
           </View>
         </View>

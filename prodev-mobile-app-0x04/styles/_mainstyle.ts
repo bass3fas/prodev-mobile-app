@@ -21,7 +21,7 @@ const BORDER_RADIUS = {
     large: 36,
 };
 
-const { height } = Dimensions.get("window");
+const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
     container: {
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     },
     backgroundImageContainer: {
         flex: 1,
+        width: width,
         height: height,
     },
     logoContainer: {
