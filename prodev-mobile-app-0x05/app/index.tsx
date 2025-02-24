@@ -1,6 +1,7 @@
 import { Text, View, Image, ImageBackground, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { useNavigation } from '@react-navigation/native';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { styles } from '@/styles/_mainstyle';
 
 export default function Index() {
@@ -12,6 +13,10 @@ export default function Index() {
 
   const handleSignInPress = () => {
     navigation.navigate('signin');
+  };
+
+  const handleContinueToHomePress = () => {
+    navigation.navigate('(home)');
   };
 
   return (
@@ -48,9 +53,12 @@ export default function Index() {
                   <Text style={styles.buttonSecondaryText}>Sign In</Text>
                 </TouchableOpacity>
               </View>
-              <View style={{ alignItems: "center", paddingVertical: 20 }}>
-                <Text style={{ color: "white" }}>Continue to home</Text>
-              </View>
+              <TouchableOpacity onPress={handleContinueToHomePress} style={{ alignItems: "center", paddingVertical: 20 }}>
+                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                  <Text style={{ color: "white" }}>Continue to home</Text>
+                  <AntDesign name="arrowright" size={24} color="white" />
+                </View>
+              </TouchableOpacity>
             </View>
           </View>
         </ImageBackground>
