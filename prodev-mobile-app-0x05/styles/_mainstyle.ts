@@ -21,8 +21,8 @@ const BORDER_RADIUS = {
     large: 36,
 };
 
-const { height, width } = Dimensions.get("window");
-
+const { width } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     container: {
         flex: 1,
